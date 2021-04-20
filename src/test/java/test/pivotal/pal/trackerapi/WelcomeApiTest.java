@@ -13,11 +13,11 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 public class WelcomeApiTest {
 
     @Autowired
-    private TestRestTemplate restTemplate;
+    private TestRestTemplate testRestTemplate;
 
     @Test
     public void exampleTest() {
-        String body = this.restTemplate.getForObject("/", String.class);
+        String body = this.testRestTemplate.getForObject("/", String.class);
         assertThat(body).isEqualTo("Hello from test");
     }
 }
